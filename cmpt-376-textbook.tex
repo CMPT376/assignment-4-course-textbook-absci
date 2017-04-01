@@ -1,0 +1,321 @@
+\documentclass[10pt,a4paper]{book}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx,color}
+\usepackage{url}
+
+\newcommand\todoarrow[1]{}
+
+\usepackage[smaller,printonlyused,withpage]{acronym}
+\usepackage{bookmark}
+\usepackage{textcomp} % fix warning with missing font shapes
+\usepackage{scrhack} % fix warnings when using KOMA with listings package
+\usepackage{xspace} % to get the spacing after macros right
+\usepackage{mparhack} % get marginpar right
+\usepackage{fixltx2e} % fixes some LaTeX stuff
+
+\definecolor{mybluelinks}{RGB}{21,138,203}
+\definecolor{gray}{RGB}{220,220,220}
+\definecolor{BrickRed}{RGB}{121,21,21}
+\definecolor{ForestGreen}{RGB}{21,121,21}
+
+% \hypersetup{%
+%     %draft,	% = no hyperlinking at all (useful in b/w printouts)
+%     colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+%     % uncomment the following line if you want to have black links (e.g., for printing)
+%     %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,%
+%     breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+%     plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+%     hypertexnames=true, pdfhighlight=/O,%nesting=true,%frenchlinks,%
+%     urlcolor=mybluelinks, linkcolor=mybluelinks, citecolor=webgreen, %pagecolor=RoyalBlue,%
+%     % urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, %pagecolor=RoyalBlue,%
+%     %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+%     pdftitle={\myTitle},%
+%     pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},%
+%     pdfsubject={},%
+%     pdfkeywords={},%
+%     pdfcreator={pdfLaTeX},%
+%     pdfproducer={LaTeX with hyperref and classicthesis}%
+% }
+
+\makeatletter
+% \renewcommand*{\toclevel@chapter}{-1} % Put chapter depth at the same level as \part.
+\makeatother
+
+
+\author{Milan Tofiloski et al.}
+\title{CMPT 376: Technical Writing}
+
+
+\date{}
+
+\begin{document}
+
+% \pagestyle{scrheadings}
+
+\maketitle
+
+\phantomsection
+
+
+\clearpage
+
+%*******************************************************
+% Indici
+%*******************************************************
+\pdfbookmark{\contentsname}{tableofcontents}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+\tableofcontents
+% \markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+
+\clearpage
+
+
+\chapter{Technical Writing: An Overview}
+
+\section{What Is Technical Writing?}
+
+Technical writing is... how to write using "technical" words?
+
+"Unclear writing is a social problem, but it often has private causes. Michael Crichton mentioned one: some writers plump up their prose, hoping that complicated sentences indicate deep thought. And when we want to hide the fact that we don't know what we're talking about, we typically throw up a tangle of abstract words in long, complex sentences."~\cite{Style11th}.
+
+
+\section{Examples of Technical Writing}
+
+
+\section{Text Structure}
+
+Introduction
+
+\noindent Body
+
+\noindent Conclusion
+
+How long should each section be?
+
+\textbf{Question} phrasing the problem
+
+\textbf{Exposition} explaining steps to solve problem
+
+\textbf{Answer} restating the problem, the approach, and succinctly providing solution
+
+
+\section{From First Draft to Final Draft. And Back Again}
+
+\color{BrickRed}TODO\color{black}
+
+
+\section{Editing \& Rewrites}
+
+Rewrite the following:
+\begin{verbatim}
+What beliefs do you believe in?
+
+The analysis was analyzed.
+
+The difficult experiment was completed with great difficulty.
+\end{verbatim}
+
+
+
+\chapter{Words}
+
+
+
+\section{Redundancy}\label{Redundancy}
+
+\color{BrickRed}TODO\color{black}
+
+
+
+\section{Hedging}\label{Hedging}
+
+\color{BrickRed}TODO\color{black}
+
+
+\section{Nominalizations}
+
+\color{BrickRed}TODO\color{black}
+
+
+\section{Avoiding Pronouns}\label{Avoiding Pronouns}
+
+\color{BrickRed}TODO\color{black}
+
+% page 11 of 2014 IEEE-SA Standards Style Manual:
+%        10.2.7 Use of the first- or second-person forms of address
+% The first-person form of address (I, we) or the second-person form of address (you) should not be used or implied in standards, e.g., “You should avoid working on lines from which a shock or slip will tend to bring your body toward exposed wires.” This sentence should be rewritten to identify the addressee, as follows: “Employees should avoid working on lines from which a shock or slip will tend to bring their bodies toward exposed wires.”
+
+
+% quote on pg 102 of “the complete guide to synthesizers” by devarahi
+
+
+Which version is correct? Why?
+\begin{verbatim}
+When someone doesn't listen or is reasonable.
+When someone doesn't listen or isn't reasonable.
+\end{verbatim}
+
+
+\section{Cohesion \& Coherence}
+
+The following example is an extreme version of cohesion\footnote{\url{http://www.onestopenglish.com/support/ask-the-experts/methodology-questions/methodology-coherence-and-cohesion/154867.article}}:
+\begin{verbatim}
+I am a teacher. The teacher was late for class. Class rhymes with grass.
+The grass is always greener on the other side of the fence. But it wasn't.
+\end{verbatim}
+
+
+\section{Describing Cohesion \& Coherence}
+
+Cohesion and coherence can be characterized using terms such as:
+\begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item Choppy
+    \item Disorganized, scattered, unstructured
+    \item Connected
+    \item Arranged
+    \item Clear
+    \item Flowing, fluid
+    \item Stilted
+\end{itemize}
+
+\color{BrickRed}TODO\color{black}
+
+
+\subsection{Cohesion}
+
+Cohesion is...
+\color{BrickRed}TODO\color{black}
+
+Cohesion exists:
+\begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item within sentences
+    \item between sentences
+    \item explicitly mentioned characters or actions
+\end{itemize}
+
+\color{BrickRed}TODO\color{black}
+
+
+\subsection{Coherence}
+
+between sentences, paragraphs, chapters, sections, and whole document
+implicitly mentioned characters, actions, or information
+background knowledge
+
+\color{BrickRed}TODO\color{black}
+
+
+\subsection{Monotony}
+
+\begin{verbatim}
+Many rivers flow out to sea. They take the most direct route. They flow quickly down the
+sides of the mountains. They flow more slowly on the flat terrain.
+\end{verbatim}
+
+\color{BrickRed}TODO\color{black}
+
+
+\chapter{Sentences}
+
+\section{Starting Sentences with Conjunctions}
+
+In general, avoid discourse markers. Examples:
+\begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item In addition...
+    \item Furthermore...
+    \item However...
+    \item Nevertheless...
+\end{itemize}
+
+Why?
+overused
+equivalent to cliches
+easy sign/trait of a poor writer
+
+How to avoid?
+Make connections clear or explicit in the writing.
+
+
+\chapter{Paragraphs}
+
+\color{BrickRed}TODO\color{black}
+
+
+\chapter{Document}
+
+\color{BrickRed}TODO\color{black}
+
+
+\section{Introduction}
+
+\color{BrickRed}TODO\color{black}
+
+
+\section{Body}
+
+\color{BrickRed}TODO\color{black}
+
+
+\section{Conclusion}
+
+\color{BrickRed}TODO\color{black}
+
+
+
+\chapter{Clarity \& Concision}
+
+\color{BrickRed}TODO\color{black}
+Define Clarity
+
+\color{BrickRed}TODO\color{black}
+Define Concision
+
+\color{BrickRed}TODO\color{black}
+Being able to explain subtle differences between fairly similar things is a skill/craft/art.
+
+\color{BrickRed}TODO\color{black}
+A simple metric for your explanation:
+Four concepts (rain, hail, snow, clouds).
+A trivial explanation would require four sentences total (one for each term).
+A poor explanation would contain more sentences than concepts.
+The optimal explanation would be one sentence.
+
+\color{BrickRed}TODO\color{black}
+explaining subtle differences: quote, paraphrase, summary, elaboration, clarification
+
+
+\chapter{Writing \& Programming}
+
+\color{BrickRed}TODO\color{black}
+
+
+\chapter{Style}\label{Style}
+
+
+Style can be characterized by invoking in the reader a desire to read every word.
+
+Rhetorical situation
+
+Audience
+
+\color{BrickRed}TODO\color{black}
+
+
+\chapter{Visualizations}\label{Visualizations}
+
+\color{BrickRed}TODO\color{black}
+
+spectrum of charts, table, graph, viz, etc
+
+
+\bibliographystyle{acl}
+\bibliography{cmpt-376-citations}
+
+\end{document}
