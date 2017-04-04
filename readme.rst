@@ -6,3 +6,4 @@ Note that *all* sources need to be cited, unless the writing *and* examples are 
 
 It is recommended to use the slides to fill in various sections.
 
+Online Tex editor: https://www.overleaf.com/
